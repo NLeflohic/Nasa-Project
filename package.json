@@ -27,5 +27,8 @@
   "homepage": "https://github.com/NLeflohic/Nasa-Project#readme",
   "dependencies": {
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^3.0.1"
   }
 }
