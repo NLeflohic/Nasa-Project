@@ -1,35 +1,19 @@
-const {MongoClient} = require ('mongodb');
+//const {MongoClient} = require ('mongodb');
 const request = require ('supertest');
 const app = require('../../app');
-// const { mongoConnect, mongoDisconnect } = require ('../../services/mongo');
+const { mongoConnect, mongoDisconnect } = require ('../../services/mongo');
 
 
 describe('Launches API', () => {
-// beforeAll(async () => {
-//   const connection = await mongoConnect();
-//   console.log (connection);
-// })
-
-// afterAll(async () => {
-//   mongoDisconnect();
-// })
-let connection;
-let db;
-
 beforeAll(async () => {
-  connection = await MongoClient.connect("mongodb+srv://nasa-api2:dgZ7zFLizkIspaS6@cluster0.slajv.mongodb.net/nasadb?retryWrites=true&w=majority");
+  const connection = await mongoConnect();
   console.log (connection);
-  db = await connection.db();
-  console.log (db)
-});
+})
 
 afterAll(async () => {
-  await connection.close();
-});
+  mongoDisconnect();
+})
 
-// beforeEach(async () => {
-//   jest.setTimeout(30000)
-// })
 
 describe('Test GET /launches', () => {
   test ('It should respond with 200 success', async () => {
