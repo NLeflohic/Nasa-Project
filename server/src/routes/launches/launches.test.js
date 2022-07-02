@@ -6,7 +6,7 @@ const { mongoConnect, mongoDisconnect } = require('../../services/mongo');
 
 describe('Launches API', () => {
   beforeAll(async () => {
-    const connection = await mongoConnect();
+    await mongoConnect();
     await loadPlanetsData();
   });
 
