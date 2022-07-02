@@ -136,7 +136,7 @@ async function getAllLaunches(skip, limit) {
 // }
 
 async function scheduleNewLaunch(launch) {
-  const planet = planets.findOne({
+  const planet = await planets.findOne({
     keplerName: launch.target,
   });
 
