@@ -8,7 +8,7 @@ describe('Launches API', () => {
   beforeAll(async () => {
     const connection = await mongoConnect();
     console.log(connection);
-    const plantets = await loadPlanetsData();
+    const planets = await loadPlanetsData();
     console.log(planets);
   });
 
