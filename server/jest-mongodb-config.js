@@ -7,5 +7,7 @@ module.exports = {
     instance: {},
     autoStart: false,
   },
-  mongoURLEnvName: "mongodb+srv://nasa-api2:dgZ7zFLizkIspaS6@cluster0.slajv.mongodb.net/nasadb?retryWrites=true&w=majority",
+  // mongoURLEnvName: "mongodb+srv://nasa-api2:dgZ7zFLizkIspaS6@cluster0.slajv.mongodb.net/nasadb?retryWrites=true&w=majority",
+  mongoURLEnvName:
+    'mongodb+srv://nasapi:GmPuLyPHGk5WoPq1@cluster0.slajv.mongodb.net/nasadb?retryWrites=true&w=majority',
 };
