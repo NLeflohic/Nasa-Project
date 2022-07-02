@@ -8,7 +8,6 @@ describe('Launches API', () => {
   beforeAll(async () => {
     const connection = await mongoConnect();
     await loadPlanetsData();
-    console.log(connection);
   });
 
   afterAll(async () => {
@@ -28,20 +27,20 @@ describe('Launches API', () => {
     const completeLaunchData = {
       mission: 'USS Entreprise',
       rocket: 'NCC 1707-D',
-      target: 'Kepppler TEST',
+      target: 'Kepler-712 c',
       launchDate: 'January 4, 2028',
     };
 
     const launchDataWithoutDate = {
       mission: 'USS Entreprise',
       rocket: 'NCC 1707-D',
-      target: 'Kepppler TEST',
+      target: 'Kepler-712 c',
     };
 
     const completeLaunchDataWithFalseDate = {
       mission: 'USS Entreprise',
       rocket: 'NCC 1707-D',
-      target: 'Kepppler TEST',
+      target: 'Kepler-712 c',
       launchDate: 'Hello',
     };
 
