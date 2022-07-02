@@ -8,7 +8,8 @@ describe('Launches API', () => {
   beforeAll(async () => {
     const connection = await mongoConnect();
     console.log(connection);
-    await loadPlanetsData();
+    const plantets = await loadPlanetsData();
+    console.log(planets);
   });
 
   afterAll(async () => {
