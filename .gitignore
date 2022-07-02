@@ -3,5 +3,3 @@ node_modules
 .DS_Store
 
 /build
-jest-mongodb-config.js
-jest-mongodb-environment.js
